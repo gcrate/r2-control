@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>R2Server</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script type='text/javascript'>
+            function buttonClick(button, action) {
+            console.log(button);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="title">R2 Control Panel</div>
+
+        <div id="headControls" class="segment">
+            <div>
+                <div class="segementTitle">Head</div>
+                <div class="controlBtn primary half" onmousedown="$.get('/head/left')" onmouseup="$.get('/head/stop')">Left</div>
+                <div class="controlBtn primary half" onmousedown="$.get('/head/right')" onmouseup="$.get('/head/stop')">Right</div>
+                <div class="controlBtn secondary third">Stop</div>
+                <div class="controlBtn secondary third">Spin 360</div>
+                <div class="controlBtn secondary third">Random</div>
+            </div>
+        </div>
+        <div id="soundControls" class="segment">
+            <div class="segementTitle">Sound</div>
+            <div>
+                <label for="autosound">Auto:</label><label class="switch"> 
+                    <input id="autosound" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+        </div>
+        <div id="lightControls" class="segment">
+            <div class="segementTitle">Lights</div>
+            <div>
+                <div>
+                    <label for="autolights">Auto:</label><label class="switch"> 
+                        <input id="autolights" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
